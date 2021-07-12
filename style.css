@@ -1,0 +1,73 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Responsible for the parallax effect */
+.parallax-container {
+    /* Need to specify a minimum height to ensure that the image appears as expected */
+    min-height: 1200px;
+
+    /* Background image is from Sergey Pesterev; found on Unsplash.com */
+    background-image: url("sergey-pesterev-JV78PVf3gGI-unsplash.jpg");
+
+    /* This is what keeps the image in place when the user scrolls */
+    background-attachment: fixed;
+
+    /* Centers the image and prevents the image from tiling (default behavior) */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Sizes the image properly so that it completely covers the window */
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+
+    padding: 2rem;
+}
+
+#main-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    opacity: 80%;
+    border-radius: 25px;
+    width: 75%;
+    height: 10%;
+}
+
+#page-heading {
+    font-size: 96px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#page-descr {
+    font-size: 56px;
+}
+
+#content-container {
+    padding: 2rem;
+    width: 95%;
+    text-align: left;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    #content-container {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 15px;
+    }
+
+    #page-heading {
+        font-size: 36px;
+    }
+
+    #page-descr {
+        font-size: 28px;
+    }
+
+    
+}
