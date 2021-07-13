@@ -8,11 +8,98 @@
     <meta name="description" content="A simple landing page that demonstrates a parallax effect.">
     <meta name="keywords" content="HTML, CSS, Parallax">
     <meta name="author" content="Valerie Russell">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Parallax Site</title>
 </head>
 
-<body>
+<body class="has-navbar-fixed-top">
+
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head has-text-centered">
+            <p class="modal-card-title">Thank you!</p>
+            <button id="close-btn" class="delete" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body p-5">
+            Thank you for visiting this site. The current information on the page is all placeholder content.
+            You can navigate back to the main page by clicking any of the buttons within this modal to close it.
+          </section>
+          <footer class="modal-card-foot">
+            <button id="success-btn" class="button is-info">Save changes</button>
+            <button id="cancel-btn" class="button">Cancel</button>
+          </footer>
+        </div>
+      </div>
+
+    <nav class="navbar is-fixed-top has-background-black p-2" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="pageNavbar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="pageNavbar" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              Home
+            </a>
+      
+            <a class="navbar-item">
+              About
+            </a>
+
+            <a class="navbar-item">
+              Contact
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Posts
+              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  Article 1
+                </a>
+                <a class="navbar-item">
+                  Article 2
+                </a>
+                <a class="navbar-item">
+                  Article 3
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Report an issue
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="navbar-end has-text-white-bis">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-info" id="signUpBtn">
+                  <strong>Sign up</strong>
+                </a>
+                <a class="button is-light" id="logInBtn">
+                  Log in
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+      <div class="notification is-info mt-4 mb-0">
+        <button id="remove-notification" class="delete"></button>
+        Thank you for visiting this site! This webpage implements several Bulma components, as well as a parallax effect through custom CSS.
+    </div>
 
     <main class="parallax-container">
 
@@ -66,5 +153,16 @@
             </div>
         </div>
     </main>
+
+    <footer class="footer has-background-black has-text-white-bis">
+        <div class="content has-text-centered">
+          <p>
+            This website was built by <a href="https://github.com/vruss14/">Valerie Russell</a> with HTML5, CSS3, and Bulma.
+          </p>
+        </div>
+      </footer>
 </body>
+
+<script src="script.js"></script>
+
 </html>
