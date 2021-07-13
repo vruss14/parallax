@@ -23,8 +23,6 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-wrap: wrap; */
-
     padding: 2rem;
 }
 
@@ -36,6 +34,7 @@ html, body {
     border-radius: 25px;
     width: 75%;
     height: 10%;
+    margin-top: 2rem;
 }
 
 #page-heading {
@@ -55,19 +54,20 @@ html, body {
 }
 
 @media screen and (max-width: 768px) {
+    #main-container {
+        width: 98%;
+    }
     #content-container {
         padding-left: 0;
         padding-right: 0;
-        font-size: 15px;
+        font-size: 18px;
     }
 
     #page-heading {
-        font-size: 36px;
+        font-size: 48px;
     }
 
     #page-descr {
-        font-size: 28px;
+        font-size: 36px;
     }
-
-    
 }
